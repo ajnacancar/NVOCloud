@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/registriStyles.css">
+
+    <link rel="shortcut icon" href="/Slike/NVOLogo.svg" type="image/x-icon">
+    <title>Registar nevladinih organizacija</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" class="header">
+
+        <div class="header-container">
+            <img src="/Slike/Logo_NVOa/NVOLogo.svg" alt="NVO">
+
+            <div><h1>Registri</h1></div>
+
+            <img style="visibility:hidden;" src="/Slike/NVOLogo.svg" alt="NVO">
+        </div>
+    </div>
+
+
+    <div class="nav-bar">
+
+        <div class="nav-options">
+            <a href="/index"><button>O nama</button></a>
+            <a href="/registri"><button onclick="testLoop()">Registri</button></a>
+            <a href="/pridruziSe"><button>Pridruži se</button></a>
+            <a href="/zakonskaRegulativa"><button>Zakonska regulativa</button></a>
+            <a href="/koalicije"><button>Koalicije</button></a>
+                <a href="/savezi"><button>Savezi</button></a>
+        </div>
+
+        <div class="burger-menu-button">
+            <button><img src="/Slike/Icons/burgerMenuIcon.svg" alt=""></button>
+        </div>
+        
+        <div id="burger-menu-phone">
+                        
+            <div class="nav-options-burger-menu-contracted">
+                <a href="/index"><button>O nama</button></a>
+                <a href="/registri"><button onclick="testLoop()">Registri</button></a>
+                <a href="/pridruziSe"><button>Pridruži se</button></a>
+                <a href="/zakonskaRegulativa"><button>Zakonska regulativa</button></a>
+                <a href="/koalicije"><button>Koalicije</button></a>
+                <a href="/savezi"><button>Savezi</button></a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="search">
+
+            <h3 style="margin-bottom: 10px; padding-bottom: 10px; text-align: center; font-size: 25px;">Pretraga</h3>
+            
+            <form action="/registri" method="GET">
+                <fieldset>
+                    <div class="join-form">
+
+                        <div class="organizacija">
+                            <h3>Tip organizacije</h3>
+                            <input list="organizacija" name="organizacija">
+                                <datalist id="organizacija">
+                                    <option font-size: 30px; value="Udruženje"></option>
+                                    <option value="Fondacija"></option>
+                                </datalist>
+                        </div>
+
+                        <div class="entitet">
+                            <h3>Entitet</h3>
+                            <input list="entitet" name="entitet">
+                            <datalist id="entitet">
+                                <option value="Federacija Bosne i Hercegovine"></option>
+                                <option value="Republika Srpska"></option>
+                            </datalist>
+                        </div>
+
+                        <div class="opstina">
+                            <h3>Općina</h3>
+                            <input list="opstina" name="opstina">
+                            <datalist id="opstina"> 
+                                <% for(var i = 0; i < opstine.length; i++){ %>
+                                    <option value="<%= opstine[i].Naziv %> "></option>
+                                <% } %>
+                            </datalist>
+                        </div>
+
+                        <div class="djelatnost">
+                            <h3>Kategorija</h3>
+                            <input list="kategorija" name="djelatnost">
+                                <datalist id="kategorija"> 
+                                    <% for(var i = 0; i < koalicija.length; i++){ %>
+                                        <option value="<%= koalicija[i].Naziv %> "></option>
+                                    <% } %>
+                                </datalist>
+                        </div>
+
+                        <div class="kanton">
+                            <h3>Kanton</h3>
+                            <input list="kanton" name="kanton">
+                            <datalist id="kanton"> 
+                                <% for(var i = 0; i < kantoni.length; i++){ %>
+                                    <option value="<%= kantoni[i].Naziv %> "></option>
+                                <% } %>
+                            </datalist>
+                        </div>
+
+                        <div class="naziv">
+                            <h3>Skraćeni naziv</h3>
+                            <input type="text" name="naziv" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div id="submit-button1"><input type="submit" value=" &#128269; Traži " id="submit-button1"></div>
+                </fieldset>
+            </form>
+        </div>
+
+
+        <div class="search-results"> <!--ovaj je za raspored-->
+
+            <div id="result-container"> <!--ovaj je za interni raspored objava-->
+                    
+                <p style="font-size: 25px; padding-top: 10px; padding-bottom: 10px;"> 
+                <% if(Pretraga.length>0) { %>   Pronađeno:    
+                <%= Pretraga.length %> <% } else{%> Nema pronađenih rezultata <% } %> </p> 
+
+                 <%- include('./partials/Registar'); %>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">NVO Cloud | Copyright | Sva prava zadržana &copy;</div>
+
+    <div id="back-to-top">
+        <a href="#header"><img src="/Slike/Icons/arrowUp.svg" alt="arrow"></a>
+    </div>
+
+    <script src="/registri.js"></script>
+    <script src="/index.js"></script>
+    <script src="/dodavanjeNVO.js"></script>
+</body>
+</html>

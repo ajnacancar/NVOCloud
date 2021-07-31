@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles.css"> <!--nav-bar css-->
+    <link rel="stylesheet" href="/pocetna.css"> <!--ostali css za ovu stranicu-->
+    <link rel="stylesheet" href="/kontakt.css"> <!--ovo je za css popUp-->
+
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+
+
+    <script src="/index.js"></script> <!--avaScript za burger meni na telefonima-->
+    <script>
+        var visible = false;
+
+toggleContact = () =>{
+
+    let contactPopUp = document.getElementById('contact-popUp');
+    let contactInfo = document.getElementById("contact-information");
+        contactInfo.innerHTML = '<%- Pretraga.Mapa %>';
+    let child = contactPopUp.children[0];
+    let icons = child.children[1];
+    let iconImages = icons.getElementsByTagName("IMG");
+
+    if(!visible){
+        icons.style.visibility = "visible";
+        contactPopUp.style.visibility = "visible";
+        for(i=0; i<iconImages.length; i++){
+            iconImages[i].style.visibility = "visible";
+        }
+        visible = true;
+    }
+    else{
+        icons.style.visibility = "hidden";
+        contactPopUp.style.visibility = "hidden";
+        for(i=0; i<iconImages.length; i++){
+            iconImages[i].style.visibility = "hidden";
+        }
+        visible = false;
+    }
+}
+
+
+window.addEventListener('keydown', (event)=>{
+    if(event.keyCode==27){
+        toggleContact();
+    }
+})
+
+window.addEventListener("click", (event) =>{
+    if(event.target.matches("#contact-popUp")){
+        toggleContact();
+    }
+})
+
+changeContactInfo = (button) =>{
+    let infoToDisplay;
+    let brTelefona = '<%= JSON.stringify(Pretraga.Telefon) %>';
+    let mail = '<%= JSON.stringify(Pretraga.Email) %>';
+    let locakija = '<%- Pretraga.Mapa %>';
+
+    let contactInfo = document.getElementById("contact-information");
+    infoToDisplay = locakija;
+    switch(button){
+        case 1:
+            infoToDisplay = locakija;
+            break;
+        case 2:
+            infoToDisplay = "<p>Broj telefona: " + brTelefona + "</p>";
+            break;
+        case 3:
+            infoToDisplay = "<p>Mail:  " + mail + "</p>";
+            break;
+        default:
+            break;
+    }
+
+    contactInfo.innerHTML = infoToDisplay;
+}
+    </script> <!--JS za kontakte-->
+
+
+    <title>Pocetna </title>
+</head>
+<body>
+    <div class="nav-bar">
+
+        <div class="nav-options">
+                <a href="/pocetna/<%= Pretraga.IdentifikacijskiBroj%>"><button>Početna</button></a>
+                <a href="/oNama/<%= Pretraga.IdentifikacijskiBroj%>"><button>O nama</button></a>
+                <a href="/oglasna/<%= Pretraga.IdentifikacijskiBroj%> "><button>Oglasna ploča</button></a>
+                <a href="#"><button onclick="toggleContact()">Kontakt</button></a>
+        </div>
+
+        <div class="burger-menu-button">
+            <button><img src="/Slike/Icons/icon-hamburger.svg" alt="BurgerMenu"></button>
+        </div>
+        
+        <div id="burger-menu-phone">
+                        
+            <div class="nav-options-burger-menu-contracted">
+                <a href="/pocetna/<%= Pretraga.IdentifikacijskiBroj%>"><button>Početna</button></a>
+                <a href="/oNama/<%= Pretraga.IdentifikacijskiBroj%>"><button>O nama</button></a>
+                <a href="/oglasna/<%= Pretraga.IdentifikacijskiBroj  %> "><button>Oglasna ploča</button></a>
+                <a href="#"><button onclick="toggleContact()">Kontakt</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="welcome-page-info">
+        
+        <div class="headers">
+            <h1>Dobro došli<%if(logIn){%>
+                <%- include('./partials/Ime'); %>
+            <%}%></h1>
+            <h1><%= Pretraga.Naziv %> </h1>
+        </div>
+
+        <div class="nvo-logo">
+            <img src="<%= Pretraga.Logo %> " alt="Logo">
+        </div>
+
+    </div>
+    
+
+    <div id="contact-popUp"> <!--css u kontakt fileu-->
+
+        <div class="contact-info">
+
+            <div class="closeWindow">
+                <button onclick="toggleContact()">X</button>
+            </div>
+            
+            <div class="contact-icons">
+                <button onclick="changeContactInfo(1)"><img src="/Slike/Icons2/locationIcon.svg" alt="Lokacija"></button>
+                <button onclick="changeContactInfo(2)"><img src="/Slike/Icons2/phoneIcon.svg" alt="Telefon"></button>
+                <button onclick="changeContactInfo(3)"><img src="/Slike/Icons2/mailIcon.svg" alt="Mail"></button>
+            </div>
+
+            <div id="contact-information">
+                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=europe+(My%20Business%20Name)&amp;t=&amp;z=4&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>            
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="back-to-top">
+        <a href="#nav-bar"><img src="/Slike/Icons/arrowUp.svg" alt="arrow"></a>
+    </div>
+
+</body>
+</html>

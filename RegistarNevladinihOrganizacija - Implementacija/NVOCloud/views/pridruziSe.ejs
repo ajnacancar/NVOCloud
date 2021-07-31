@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/registriStyles.css">
+    <link rel="stylesheet" href="/pridruziSeStyles.css">
+    <script src="/index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <title>Pridruži se</title>
+</head>
+<body>
+    <div class="header">
+
+        <div class="header-container">
+            <img src="\Slike\Logo_NVOa\NVOLogo.svg" alt="NVO">
+
+            <div><h1>Pridruži se</h1></div>
+
+            <img style="visibility: hidden;" src="\Slike\Logo_NVOa\NVOLogo.svg" alt="NVO">
+        </div>
+    </div>
+
+    <div class="nav-bar">
+
+        <div class="nav-options">
+            <a href="/index"><button>O nama</button></a>
+            <a href="/registri"><button>Registri</button></a>
+            <a href="/pridruziSe"><button>Pridruži se</button></a>
+            <a href="/zakonskaRegulativa"><button>Zakonska regulativa</button></a>
+            <a href="/koalicije"><button>Koalicije</button></a>
+                <a href="/savezi"><button>Savezi</button></a>
+        </div>
+
+        <div class="burger-menu-button">
+            <button><img src="/Slike/Icons/burgerMenuIcon.svg" alt="Menu"></button>
+        </div>
+        
+        <div id="burger-menu-phone">
+                        
+            <div class="nav-options-burger-menu-contracted">
+                <a href="/index"><button>O nama</button></a>
+            <a href="/registri"><button>Registri</button></a>
+            <a href="/pridruziSe"><button>Pridruži se</button></a>
+            <a href="/zakonskaRegulativa"><button>Zakonska regulativa</button></a>
+            <a href="/koalicije"><button>Koalicije</button></a>
+                <a href="/savezi"><button>Savezi</button></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="search">
+
+            <h3 style="margin-bottom: 10px; text-align: center; font-size: 22px;">Prijava</h3>
+            
+            <form action="/pridruziSe" method="post" autocomplete="off">
+                <fieldset>
+                    <div class="join-form">
+
+                        <div class="organizacija">
+                            <h3>Korisničko ime</h3>
+                            <input type="text" name="ime" autocomplete="off">
+                        </div>
+
+                        <div class="entitet">
+                            <h3>Lozinka</h3>
+                            <input type="password" name="passw">
+                        </div>
+                    </div>
+                    <div>
+                        <% if(poruka != ''){ %>
+                            <p style="text-align: center; padding-bottom: 10px; font-size: 20px; color: rgb(255, 61, 55);"> <b> <%= poruka  %> </b></p>
+                        <% } %> 
+                    </div>
+                    <div id="submit-button1"><input type="submit" style="font-size: 18px;" value="Pridruži se" id="submit-button1"></div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="instruction-container">
+
+            <div class="instructions">
+                <h2><center>Uputstvo kako se pridružiti</center></h2>
+                <p style="font-size: 20px;"> <br> <b>Ukoliko ste predstavnik nevladine organizacije</b>  imate mogućnost prijave na sam sistem. Kao predstavik nevladine organizacije
+                    posjedujete pristupne podatke koje vam je izdalo nadležno Ministarstvo. E-mail adresu i lozinku unesite u polja naznačena
+                    na stranici i klikom na dugme Pridruži se, pristupate dijelu stranice koje Vam je namijenjeno.<br> <br>
+                     <b>Ukoliko ste izgubili pristupne podatke ili ste zaboravili lozinku</b>, nakon trećeg pokušaja, iskočit će Vam pop-up prozor 
+                    putem koje ćete poslati svoju e-mail adresu i poruku u kojoj ćete objasniti navedeni problem. Nakon što administrator utvrdi 
+                    Vaš identitet, kao i Vaša identifikacija, putem <br> e-mail adrese koju ste naveli u obrascu ćete od strane administratora dobiti 
+                    nove pristupne podatke. <br> <br> Ukoliko postoji nejasnoća obratite se adminstratoru ili Vašoj nevladinoj organizaciji.
+                 </p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="back-to-top">
+        <a href="#header"><img src="/Slike/Icons/arrowUp.svg" alt="arrow"></a>
+    </div>
+    
+    <div class="footer">NVO Cloud | Copyright | Sva prava zadržana &copy;</div>
+</body>
+</html>

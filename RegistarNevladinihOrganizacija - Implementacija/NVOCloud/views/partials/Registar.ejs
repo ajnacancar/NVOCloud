@@ -1,0 +1,75 @@
+<% for(var i = 0; i<Pretraga.length; i++){ %> 
+<div class="search-result-item-container">
+
+    <div class="basic-info">
+
+        <div class="nvo-basic-details">
+
+            <div class="logo-image">
+                <img src="<%= Pretraga[i].Logo %> " alt="Logo">
+            </div>
+
+            <div class="nvo-name"><h2> <%= Pretraga[i].Naziv %> </h2></div>
+
+        </div>
+
+        <div class="expand-button">
+            <button><img src="/Slike/Icons/plus-expand.svg" alt="+"></button>
+        </div>
+
+    </div>
+
+    <div class="nvo-contracted-details">
+        
+       <div class="left-right-side-container">
+
+        <div class="left-side">
+
+            <div class="redni-broj-upisa">
+                <h3>Identifikacijski broj</h3>
+                <p> <%= Pretraga[i].IdentifikacijskiBroj %> </p>
+            </div>
+
+            <div class="broj-rjesenja">
+                <h3>Broj žiro računa</h3>
+                <p><%= Pretraga[i].BrojZiroRacuna %> </p>
+            </div>
+
+            <div class="datum-upisa">
+                <h3>Status</h3>
+                <p><%= Pretraga[i].Status %> </p>
+            </div>
+            <div class="djelatnost">
+                <h3>Kategorija</h3>
+                <p><%= Pretraga[i].NazivKategorije %> </p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="opstina">
+                <h3>Opština</h3>
+                <p><%= Pretraga[i].Opcina %> </p>
+            </div>
+            <div class="adresa">
+                <h3>Adresa</h3>
+                <p><%= Pretraga[i].Adresa %> </p>
+            </div>
+            <div class="telefon">
+                <h3> Telefon </h3>
+                <p><%= Pretraga[i].Telefon %></p>
+            </div>
+            <div class="email">
+                <h3> Email </h3>
+                <p><%= Pretraga[i].Email %></p>
+            </div>
+        </div>
+
+       </div>
+
+        <div class="more-details-button">
+            <a href="/pocetna/<%=Pretraga[i].IdentifikacijskiBroj%>" target="_blank"><button>Više detalja&hellip;</button></a>
+        </div>
+
+    </div>
+</div>
+<% } %> 

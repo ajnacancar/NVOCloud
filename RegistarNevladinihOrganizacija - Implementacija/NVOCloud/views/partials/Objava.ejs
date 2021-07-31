@@ -1,0 +1,25 @@
+<% for (let i = 0; i < Objave.length; i++) { %>
+
+<div class="activity">
+                
+    <div class="header" style="text-align: center;"><%= Objave[i].Naziv  %> </div>
+
+    <div class="activity-image">
+        <div class="PDF-button button-one" style="text-align: center;">
+            <a href="" download=<%= Objave[i].Prilog  %>><button>
+                <p>Prilog</p>
+                <img src="/Slike/Icons/downloadArrowIcon.svg" alt="Download">
+            </button>
+        </a>
+        </div>
+    </div>
+    
+    <div class="activity-description">
+        <br>
+        <p><%= Objave[i].Sadrzaj %> </p>
+        <br><br><br>
+        <p>Datum objave: <%= Objave[i].DatumObjave %> </p>
+    </div>
+
+</div>
+<% }  %> 

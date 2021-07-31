@@ -1,0 +1,99 @@
+
+.about-container{
+    width: 100%;
+    min-height: 100%;
+    padding: 2% 1%;
+    background-color: rgb(208, 230, 238);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-flow: column nowrap;
+}
+.logo{
+    width: 15%;
+    height: 15%;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+.aboutUs{
+    width: 80%;
+    min-height: 400px;
+    height: auto;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+.aboutUs p{
+    font-size: 30px;
+    text-align: left;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+/*-----------------------------------------------------------------------------------------*/
+
+.about{
+    max-width: 80%;
+    min-height: 95%;
+    height: auto;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    flex-flow: row nowrap;
+}
+
+
+.header{
+    width: 100%;
+    height: auto;
+    padding: 0px 5px;
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    background-color: #eff8ff;
+    border-radius: 20px;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 150px) and (max-width: 900px){ 
+    .about-container{
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-flow: column wrap;
+    }
+    
+    .about{
+        min-width: 100%;
+        min-height: 95%;
+
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+        flex-flow: column nowrap;
+    }
+
+    .about .vision, .mision{
+        width: 90%;
+        height: 40%;
+    }    
+
+    .aboutUs{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 150px) and (max-width: 450px){ 
+    .about .header{
+        font-size: 0.8em;
+    }
+
+    .about .notice{
+        font-size: 0.7em;
+    }
+}

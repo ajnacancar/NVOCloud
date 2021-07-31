@@ -1,0 +1,282 @@
+html, body{
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+
+.search{
+    grid-area: pretraga;
+}
+
+.search-results{
+    grid-area: rezultat;
+}
+
+.container{
+    min-height: 100%;
+    height: auto;
+    
+    grid-template-columns: 70%;
+    grid-template-rows: auto auto;
+    display: grid;
+    grid-template-areas: 
+        "pretraga"
+        "rezultat";
+
+    gap: 60px;
+    padding: 4% 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.search{
+    background-color: #eff8ff;
+    border-radius: 20px;
+    padding: 10px 10px 5px 10px;
+}
+
+.search form{
+    width: 100%;
+    height: 100%;
+}
+
+.search form fieldset{
+    border: none;
+}
+
+.search form .join-form{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.search form .join-form div{
+    width: 40%;
+    margin-bottom: 15px;
+}
+
+.search .join-form input{
+    width: 100%;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 5px 5px 5px;
+}
+
+
+#submit-button1{
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+
+    font-size: 15px;
+    font-weight: bolder;
+    
+    background-color: #c9cbff;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#submit-button1:hover{
+    background-color: #9b9ef7;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+#result-container{
+    width: 100%;
+    max-height: 90%;
+    height: auto;
+    background-color:#eff8ff;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 15px 10px;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    flex-flow: column nowrap;
+}
+
+#result-container .headers{
+    width: 100%;
+    font-size: 18px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+
+#result-container .description{
+    width: 80%;
+    height: auto;
+    text-align: justify;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+#result-container .member-list-container{
+    min-width: 50%;
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+#result-container .member-list-container ul{
+    width: 100%;
+    list-style-type: none;
+    padding: 10px;
+    background-color: none;
+}
+
+#result-container .member-list-container ul li{ 
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: #c9cbff;
+    margin-bottom: 10px;
+}
+
+#result-container .supervisor-details{
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 35px;
+}
+
+#result-container .detalji{
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    line-height: 30px;
+}
+
+#result-container .osoba h2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+    width: 27%;
+    border-radius: 18px;
+}
+
+
+#result-container .osoba p{
+    padding: 3px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+#result-container .pretraga h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+    font-size: 25px;
+    width: 27%;
+    border-radius: 18px;
+}
+#result-container .pretraga{
+    margin-bottom: 20px;
+}
+#result-container .pretraga p{
+    padding: 3px;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.poc h2{
+    font-size: 25px;
+    font-weight: 200;
+    text-align: justify;
+    padding: 15px 20px;
+}
+/*----------------------------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 601px) and (max-width: 1100px){
+    .container{
+        min-height: 85%;
+        height: auto;
+        grid-template-columns: 85%;
+        gap: 40px;
+    }
+}
+
+@media only screen and (min-width: 150px) and (max-width: 600px){
+    .container{
+        min-height: 90%;
+        height: auto;
+        grid-template-columns: 95%;
+        grid-template-rows: auto auto;
+        display: grid;
+        grid-template-areas: 
+            "pretraga"
+            "rezultat";
+        
+        gap: 35px;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+        padding-top: 6%;
+
+        font-size: 0.55em;
+    }
+    
+    .search form .join-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+    }
+
+    .search form .join-form h3{
+        font-size: 1.2em;
+        margin-bottom: 3px;
+    }
+
+    .search .join-form input{
+        height: 22px;
+    }
+
+    .search form .join-form div{
+        width: 98%;
+        margin-bottom: 5px;
+    }
+
+    #submit-button1{
+        width: 25%;
+        height: 22px;
+        margin: 0 auto;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    #result-container .headers{
+       font-size: 12px;
+    }
+
+    #result-container .description{
+        width: 99%;
+        margin-bottom: 30px;
+        padding: 10px;
+    } 
+
+        
+    #result-container .member-list-container ul li{ 
+        font-size: 15px;
+    }
+
+}

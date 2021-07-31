@@ -1,0 +1,228 @@
+.main-container{
+    width: 100%;
+    min-height: 100%;
+    padding: 1% 1%;
+    background-color: rgb(208, 230, 238);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-flow: row wrap;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.news{
+    max-width: 45%;
+    min-height: 95%;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    flex-flow: column nowrap;
+}
+
+.news .header{
+    width: 50%;
+    height: auto;
+
+    font-size: 18px;
+    text-align: center;
+    border-radius: 30px;
+    margin-bottom: 40px;
+
+    background-color: #eff8ff;
+}
+
+.news .notice{
+    width: 90%;
+    min-height: 40px;
+    height: auto;
+    
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 20px;
+    margin-bottom: 80px;
+
+  
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.action{
+    width: 50%;
+    min-height: 500px;
+    height: auto;
+
+    background-color: none;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.action-header{
+    width: 50%;
+    height: auto;
+
+    font-size: 18px;
+    text-align: center;
+    border-radius: 30px;
+    margin-bottom: 40px;
+
+    padding: 20px;
+
+    background-color: #eff8ff;
+}
+
+.activities{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: space-between;
+    flex-flow: row wrap;
+}
+
+.activity{
+    width: 250px;
+    height: 320px;
+
+    padding: 16px;
+    background-color: #98acf8;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px rgb(112, 150, 164);
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activity .header{
+    width: 100%;
+    height: auto;
+    padding: 2% 2%;
+    background-color:#506bd4 ;
+    font-size: 20px;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.activity .activity-image{
+    width: 98%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+.activity-image p{
+    background-color: rgb(123, 121, 238);
+    width: 60px;
+    height: 30px;
+    padding-top: 10%;
+}
+.activity .activity-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.activity .activity-description{
+    font-family: unset;
+}
+
+
+
+.download .PDF-button a button{
+    width: 50%;
+    height: 100%;
+    padding: 5px 0px;
+    background-color: #2e85db;
+    color: rgb(81, 216, 221);
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.activity-image .PDF-button a button:hover{
+    background-color: #0a3744;
+}
+
+
+.activity-image .PDF-button a button p{
+    display: block;
+}
+.activity-image .PDF-button a button:hover p{
+    display: none;
+}
+
+
+.activity-image .PDF-button a button img{
+    display: none;
+}
+.activity-image .PDF-button a button:hover img{
+    display: block;
+    height: 16px;
+    width: 50%;
+    margin: auto;
+}
+
+
+@media only screen and (min-width: 150px) and (max-width: 980px){ 
+    .main-container{
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-flow: column wrap;
+    }
+    
+    .news{
+        min-width: 100%;
+        min-height: 95%;
+
+        justify-content: center;
+        align-items: center;
+        align-content: space-between;
+    }
+
+    .action{
+        width: 98%;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: space-between;
+        flex-flow: column nowrap;
+    }
+
+    .activity{
+        padding: 100;
+        max-width: 280px;
+        width: auto;
+        margin-bottom: 15px;
+    }
+
+    .activity .activity-image{
+        width: 50%;
+    }
+
+}
+
+@media only screen and (min-width: 150px) and (max-width: 450px){ 
+    .news .header, .action-header{
+        font-size: 0.8em;
+    }
+
+    .news .notice, .activity .activity-description{
+        font-size: 0.7em;
+    }
+}

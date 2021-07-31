@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="120"
+   height="50"
+   viewBox="0 0 31.749999 13.229166"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="NVOLogo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="205.74578"
+     inkscape:cy="92.109845"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     units="px" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g844"
+       transform="matrix(1.5663165,0,0,1.5663165,-4.3382858,-12.824979)">
+      <path
+         style="fill:#f2f2f2;stroke:#000000;stroke-width:0.0297853px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 7.0822457,10.755425 C 7.5799277,9.6437004 9.3020595,9.0876195 10.78304,9.5820028 c 2.604899,-1.3470753 2.911228,0.4963692 3.490179,0.4513162 0.564014,-0.6241587 1.779952,-1.5982081 3.068951,0 1.466957,-0.6328944 2.413818,-0.093567 2.391978,1.459255 1.61672,0.592397 1.293883,2.488964 -0.180527,3.114084 -0.66011,1.932528 -3.399145,0.327485 -4.688179,-0.0062 -0.897042,1.875532 -2.717807,1.529792 -4.338148,0.352253 -1.157243,-0.149712 -1.6151,0.857436 -2.2263345,0.890536 -0.5540857,0.03 -1.1469919,-1.169605 -2.1213463,-0.454263 C 4.8964528,15.900912 3.7459392,14.273947 5.126542,13.282841 2.4245552,11.669679 6.112014,9.4056661 7.0822457,10.755469 Z"
+         id="path833"
+         sodipodi:nodetypes="cccccccccccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:1.88077px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;word-spacing:0px;stroke-width:0.0783655"
+         x="7.0580792"
+         y="12.33357"
+         id="text837"><tspan
+           sodipodi:role="line"
+           id="tspan835"
+           x="7.0580792"
+           y="12.33357"
+           style="stroke-width:0.0783655">NVO Cloud</tspan></text>
+      <path
+         style="fill:#ececec;stroke:#000000;stroke-width:0.0442411px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 6.6540222,12.572858 c 0.8825065,-0.883377 1.655413,-0.530064 2.4188732,-0.07016"
+         id="path839"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.0297853px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 10.632601,10.981083 c 0.613456,-0.777263 1.25726,-0.553069 1.910573,-0.01505"
+         id="path841"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:#ececec;stroke:#000000;stroke-width:0.0442411px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 8.2067281,13.774686 c 0.8825065,0.883378 1.6554131,0.530065 2.4188729,0.07016"
+         id="path839-5"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:#ececec;stroke:#000000;stroke-width:0.0442411px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 15.412745,12.580292 c 0.882507,-0.883378 1.655413,-0.530064 2.418874,-0.07016"
+         id="path839-7"
+         sodipodi:nodetypes="cc" />
+    </g>
+  </g>
+</svg>

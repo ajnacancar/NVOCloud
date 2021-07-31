@@ -1,0 +1,36 @@
+* {
+    background-color: #DCDCDC;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+ padding-top: 35px;
+ font-family: 'Baloo Tammudu 2', cursive;
+ text-align: center;
+ font-size: 50px;
+}
+
+div {
+    font-size: 30px;
+    font-family: 'Oxygen', sans-serif;
+    padding-left: 15px;
+    line-height: 55px;
+}
+
+.glavni {
+    display: flex;
+}
+
+ul {
+    font-size: 30px;
+    font-family: 'Oxygen', sans-serif;
+    text-align: left;
+    padding-left: 95px;
+    line-height: 55px;
+}
+
+img {
+    padding-left: 150px;
+    width: 700px;
+}

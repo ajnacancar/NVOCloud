@@ -1,0 +1,197 @@
+
+.block{
+    width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    background-color: #eff8ff;
+    padding: 8px 8px 8px 8px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block p{
+    font-size: 1em;
+}
+
+.one{
+    grid-area: block-one;
+}
+
+.two{
+    grid-area: block-two;
+}
+
+.three{
+    grid-area: block-three;
+}
+
+.four{
+    grid-area: block-four;
+}
+
+.container{
+    width: 100%;
+    min-height: 85%;
+    height: auto;
+
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 45% 45%;
+    display: grid;
+    grid-template-areas: 
+        'block-one block-two'
+        'block-three block-four';
+
+    gap: 3%;
+    justify-content: center;
+    align-content: center;
+}
+
+/*-----------------------------------------------------------------------------------------*/
+
+.link-one{
+    grid-area: header-one;
+}
+
+.link-two{
+    grid-area: header-two
+}
+.button-one{
+    grid-area: button-one
+}
+
+.button-two{
+    grid-area: button-two
+}
+
+.container .download{
+    width: 100%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: auto 60%;
+    grid-template-rows: 40% 40%;
+    grid-template-areas: 
+    "header-one button-one"
+    "header-two button-two";
+    
+    row-gap: 5%;
+    column-gap: 10%;
+    justify-content: space-around;
+    align-items: space-between;
+    flex-flow: row nowrap;
+    font-size: 14px;
+
+    border: 1px;
+}
+
+.download .PDF-button a button{
+    width: 50%;
+    height: 100%;
+    padding: 5px 0px;
+    background-color: #39a9cb;
+    color: white;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.download .PDF-button a button:hover{
+    background-color: #0a3744;
+}
+
+
+.download .PDF-button a button p{
+    display: block;
+}
+.download .PDF-button a button:hover p{
+    display: none;
+}
+
+
+.download .PDF-button a button img{
+    display: none;
+}
+.download .PDF-button a button:hover img{
+    display: block;
+    height: 16px;
+    width: 50%;
+    margin: auto;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 550px) and (max-width: 800px){
+    .block{
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 150px) and (max-width: 700px){
+    .container{
+        grid-template-columns: 60%;
+        grid-template-rows: 24% 24% 24% 24%;
+        display: grid;
+        grid-template-areas: 
+            'block-one'
+            'block-two'
+            'block-three' 
+            'block-four';
+    
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        font-size: 0.5em;
+    }
+
+    .block{
+        overflow: unset;
+    }
+
+    .container .download{
+        width: 100%;
+        height: 40%;
+        display: grid;
+        grid-template-columns: auto 25% auto 25%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+        "header-one button-one header-two button-two";
+        gap: 4px;
+        justify-content: space-around;
+        align-items: center;
+
+        font-size: 0.85em;
+    }
+
+    .download .PDF-button a button{
+        width: 80%;
+        font-size: 0.45em;
+    }
+
+    .download .PDF-button a button:hover img{
+        display: block;
+        height: 8px;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 290px){
+    .header{
+        font-size: 0.3em;
+    }
+
+    .block{
+        font-size: 0.45em;
+    }
+
+    .container .download{
+        font-size: 0.6em;
+    }
+}
